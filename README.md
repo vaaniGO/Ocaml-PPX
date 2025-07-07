@@ -45,7 +45,8 @@ dune exec ./bin/checker.exe -- /path/to/your/file
 ├── lib/
 │   └── my_ppx.ml         # PPX logic
 ├── test/
-│   └── example.ml        # Test files
+│   └── test_ppx_1.ml
+|   └── explicit_typing.ml       # Test files
 ├── dune-project
 └── README.md
 ```
