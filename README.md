@@ -39,7 +39,7 @@ dune exec ./bin/checker.exe -- /path/to/your/file
 ```
 
 ### 📂 Project Structure
-.
+```bash
 ├── bin/
 │   └── checker.ml        # Main entry point
 ├── lib/
@@ -48,3 +48,4 @@ dune exec ./bin/checker.exe -- /path/to/your/file
 │   └── example.ml        # Test files
 ├── dune-project
 └── README.md
+```
