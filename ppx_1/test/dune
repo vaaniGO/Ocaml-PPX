@@ -1,0 +1,4 @@
+(tests
+ (names test_ppx_1 explicit_typing)
+ (preprocess
+  (pps ppx_1)))

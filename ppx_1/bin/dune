@@ -1,0 +1,4 @@
+(executable
+ (name checker)
+ (public_name checker)
+ (libraries ppx_1 ppxlib))
