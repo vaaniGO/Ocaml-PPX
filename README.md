@@ -32,6 +32,27 @@ Builds the executable
 ```bash
 dune build
 ```
+After running the above command, you will get the output: 
+```bash
+ld: warning: -undefined suppress is deprecated
+ld: warning: -undefined suppress is deprecated
+File "test/explicit_typing.ml", line 13, characters 0-23:
+13 | let f (x : int) = x * 2;;
+     ^^^^^^^^^^^^^^^^^^^^^^^
+Error: Functions must have type annotations on all parameters and on the return type.
+File "test/test_ppx_1.ml", lines 3-5, characters 2-6:
+3 | ..for i = 0 to 10 do
+4 |     Printf.printf "i = %d\n" i
+5 |   done
+Error: For-loops are not permitted (-allow_for_loops is false).
+```
+The warnings can be ignored. The remaining 2 errors are actually results of the proprocessor on the test files (it accurately bans untyped functions and for-loops). You can play around with the test files by uncommenting certain tests. You can also add more .ml files to test. But after adding them, also configure test/dune accordingly:
+```bash
+(tests
+ (names test_ppx_1 explicit_typing /add more names here/ )
+ (preprocess
+  (pps ppx_1)))
+```
 
 Run the executable on any file
 ```bash
