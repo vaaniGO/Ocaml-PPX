@@ -7,9 +7,9 @@
 (source
  (github username/reponame))
 
-(authors "Author Name <author@example.com>")
+(authors "Vaani Goenka <vaani.goenka_ug2024@ashoka.edu.in>")
 
-(maintainers "Maintainer Name <maintainer@example.com>")
+(maintainers "Vaani Goenka <vaani.goenka_ug2024@ashoka.edu.in>")
 
 (license MIT)
 
@@ -17,9 +17,9 @@
 
 (package
  (name ppx_1)
- (synopsis "A short synopsis")
- (description "A longer description")
+ (synopsis "ICS OCaml Preprocessor!")
+ (description "All ICS code must pass the preprocessor tests!")
  (tags
-  ("add topics" "to describe" your project)))
+  ("AI" "AI-Resistant Programmning" your project)))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html

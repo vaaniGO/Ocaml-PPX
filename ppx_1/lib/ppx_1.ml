@@ -30,6 +30,13 @@ let all_fun_args_are_annotated entry_expr =
   in
   check_params entry_expr && has_return_type_annotation entry_expr
 
+  (* Note that we allow the following String functions: 
+     1. String.get s position
+     2. String.sub s start_index length
+     3. String.length s
+
+     Why? It is difficult to implement  these themselves, particularly so in timed lab-tests. 
+    *)
 let banned_always_functions : StringSet.t =
   StringSet.of_list [
     "print_char"; "print_string"; "print_bytes"; "print_int"; "print_float"; "print_endline"; "print_newline";
@@ -154,7 +161,8 @@ let ppx_enforcer_rules =
       | _ -> super#expression expr
       )
   end
-let () =
+
+  let () =
   Driver.add_arg "-allow_for_loops"
     (Set allow_for_loops)
     ~doc:"Allow for-loops to be used.";

@@ -3,3 +3,5 @@
  (public_name ppx_1)
  (kind ppx_rewriter)
  (libraries ppxlib))
+
+; This defines ppx_1 as a library
