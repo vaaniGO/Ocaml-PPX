@@ -66,6 +66,21 @@ Run the executable on any file
 dune exec ./bin/checker.exe -- /path/to/your/file
 ```
 
+Here is what a success message looks like 
+```bash
+✅ YAYCaml! path/to/your/file
+```
+
+Here is what an error message looks like
+```bash
+🐫 OOPSCaml! Error: path/to/your/file
+```
+
+Here is a list of flags you can use. Flags must come after the file name with the - as shown below.
+```bash
+-allow_for_loops -allow_while_loops -allow_mutability -allow_lambdas
+```
+
 ### 📂 Project Structure
 ```bash
 ppx_1/
