@@ -25,6 +25,11 @@ opam install dune ocaml odoc ppxlib
 
 The repository already contains a build. You can directly run command #3. If that does not work: 
 
+
+```bash
+eval $(opam env)
+```
+
 Cleans the previous build (if needed)
 ```bash
 dune clean
